@@ -14,8 +14,21 @@
       <script type="text/javascript">
          /* page specific js */
 
+         $(document).on('change','input[name="radio-ex"]',function(){
+
+           if($('input[name="radio-ex"]:checked').val()=="other"){
+             $("#asic-other").css("display","block");
+           } else {
+             $("#asic-other").css("display","none");
+           }
+
+
+            });
 
       </script>
+      <style type="text/css">
+      #asic-other{display:none;}
+      </style>
    </head>
    <body class="live-demo au-body au-grid">
       <main class="au-grid">
@@ -72,12 +85,11 @@
 
                 <h3><abbr title="Aviation security identification card">ASIC</abbr> card verification</h3>
 
-                <div class="au-callout">
                   <p>CASA requires the applicant has undergone a security check when issuing a flight crew licence. Aviation security identification card (<abbr title="Aviation security identification card">ASIC</abbr>) holders can verify their card below.
                   </p>
 
                   <p>If you do not yet have an ASIC, or you have an AVID, you cannot finish this application online and will need to apply for your licence <a href="https://www.casa.gov.au/node/25841">using the relevent form</a>.</p>
-                </div>
+
 
 
 
@@ -86,203 +98,252 @@
                   <span class="au-hint-text">Your issuing body is who you applied to and received your ASIC from. If you're unsure of this, please refer to any correspondence you received regarding your ASIC application or contact your flight school.</span>
 
 
+                  <div class="au-form-group">
 
-                  <select id="select1" class="au-select">
+                    <div class="au-control-input">
+                        <input class="au-control-input__input" type="radio" name="radio-ex" id="radio-1">
+                        <label class="au-control-input__text" for="radio-1"><p class="au-label">Aviation ID Australia</p></label>
+                    </div>
 
-                                  <!--optgroup label="General issuing bodies"-->
+                  </div>
+                  <div class="au-form-group">
 
-                                  <option>
+                  <div class="au-control-input">
+                      <input class="au-control-input__input" type="radio" name="radio-ex" id="radio-2">
+                      <label class="au-control-input__text" for="radio-2"><p class="au-label">Civil Aviation Safety Authority initial issue</p>
+                      </label>
+                  </div>
 
-                                  Aerodrome Management Services Pty Ltd
+                </div>
+                <div class="au-form-group">
 
-                                  </option>
-                                  <option>
+                  <div class="au-control-input">
+                      <input class="au-control-input__input" type="radio" name="radio-ex" id="radio-3">
+                      <label class="au-control-input__text" for="radio-3"><p class="au-label">Civil Aviation Safety Authority renewal and subsequent issues</p>
+                    </label>
+                  </div>
 
-                                  Airport Security (Security ID/ Midwest Solutions)
+                </div>
+                <div class="au-form-group">
 
-                                  </option>
+                  <div class="au-control-input">
+                      <input class="au-control-input__input" type="radio" name="radio-ex" id="radio-4">
+                      <label class="au-control-input__text" for="radio-4"><p class="au-label">Veritas (VEA)</p>
+                      </label>
+                  </div>
 
-                                  <option>
+                </div>
+                <div class="au-form-group">
 
-                                  Airservices Australia
+                  <div class="au-control-input">
+                      <input class="au-control-input__input" type="radio" name="radio-ex" id="radio-5" value="other">
+                      <label class="au-control-input__text" for="radio-5"><p class="au-label">Other provider</p>
+                      </label>
 
-                                  </option>
+                      <div class="casa-form-other-list" id="asic-other">
+                        <label for="select1" class="au-hint-text">Please select your provider from the list below</label>
 
-                                  <option>
 
-                                  Aviation ID Australia
+                      <select id="select1" class="au-select">
 
-                                  </option>
+                                      <!--optgroup label="General issuing bodies"-->
 
-                <option>
+                                      <option>
 
-                Civil Aviation Safety Authority (CASA)
+                                      Aerodrome Management Services Pty Ltd
 
-                </option>
+                                      </option>
+                                      <option>
 
-                <option>
+                                      Airport Security (Security ID/ Midwest Solutions)
 
-                Cobham Aviation Services Australia
+                                      </option>
 
-                </option>
+                                      <option>
 
-                <option>
+                                      Airservices Australia
 
-                QANTAS
+                                      </option>
 
-                </option>
 
-                <option>
 
-                Toll Priority
 
-                </option>
 
-                <option>
 
-                Veritas (VEA)
 
-                </option>
 
-                <option>
 
-                Virgin Australia Airlines
+                    <!--optgroup label="Airlines and air operators  "-->
 
-                </option>
 
 
 
 
 
-                <!--optgroup label="Airlines and air operators  "-->
 
 
 
+                    <!--optgroup label="Airports"-->
 
+                    <option>
 
+                    Adelaide Airport
 
+                    </option>
 
 
 
-                <!--optgroup label="Airports"-->
+                    <option>
 
-                <option>
+                    Alice Springs Airport
 
-                Adelaide Airport
+                    </option>
 
-                </option>
+                    <option>
 
+                    Brisbane Airport
 
+                    </option>
 
-                <option>
+                    <option>
 
-                Alice Springs Airport
+                    Cairns Airport
 
-                </option>
+                    </option>
 
-                <option>
+                    <option>
 
-                Brisbane Airport
+                    Canberra Airport (Capital Airport Group)
 
-                </option>
+                    </option>
 
-                <option>
+                    <option>
 
-                Cairns Airport
+                    Cobham Aviation Services Australia
 
-                </option>
+                    </option>
 
-                <option>
 
-                Canberra Airport (Capital Airport Group)
 
-                </option>
+                    <option>
 
-                <option>
+                    Coober Pedy Airport (District Council of Coober Pedy)
 
-                Coober Pedy Airport (District Council of Coober Pedy)
+                    </option>
 
-                </option>
+                    <option>
 
-                <option>
+                    Darwin International Airport
 
-                Darwin International Airport
+                    </option>
 
-                </option>
+                    <option>
 
-                <option>
+                    Gold Coast Airport (Queensland Airports Ltd)
 
-                Gold Coast Airport (Queensland Airports Ltd)
+                    </option>
 
-                </option>
+                    <option>
 
-                <option>
+                    Great Barrier Reef Airport (Hamilton Island Enterprises)
 
-                Great Barrier Reef Airport (Hamilton Island Enterprises)
+                    </option>
 
-                </option>
+                    <option>
 
-                <option>
+                    Hobart International Airport
 
-                Hobart International Airport
+                    </option>
 
-                </option>
+                    <option>
 
-                <option>
+                    Mackay Airport
 
-                Mackay Airport
+                    </option>
 
-                </option>
+                    <option>
 
-                <option>
+                    Melbourne Airport
 
-                Melbourne Airport
+                    </option>
 
-                </option>
+                    <option>
 
-                <option>
+                    Newcastle Airport
 
-                Newcastle Airport
+                    </option>
 
-                </option>
+                    <option>
 
-                <option>
+                    Perth Airport
 
-                Perth Airport
+                    </option>
 
-                </option>
+                    <option>
 
-                <option>
+                    QANTAS
 
-                Recreational Aviation Australia (RAA)
+                    </option>
 
-                </option>
+                    <option>
 
-                <option>
+                    Recreational Aviation Australia (RAA)
 
-                Rockhampton Airport (Rockhampton Regional Council)
+                    </option>
 
-                </option>
+                    <option>
 
-                <option>
+                    Rockhampton Airport (Rockhampton Regional Council)
 
-                Saint George Airport (Balonne Shire Council)
+                    </option>
 
-                </option>
+                    <option>
 
-                <option>
+                    Saint George Airport (Balonne Shire Council)
 
-                Sunshine Coast Airport (Sunshine Coast Regional Council)
+                    </option>
 
-                </option>
+                    <option>
 
-                <option>
+                    Sunshine Coast Airport (Sunshine Coast Regional Council)
 
-                Sydney Airport
+                    </option>
 
-                </option>
+                    <option>
 
-</select>
+                    Sydney Airport
+
+                    </option>
+
+
+
+                    <option>
+
+                    Toll Priority
+
+                    </option>
+
+
+
+                    <option>
+
+                    Virgin Australia Airlines
+
+                    </option>
+
+                    </select>
+
+
+                  </div>
+
+
+                </div>
+
+
+
+
+
+
 
 
 <div class="au-form-group">
@@ -301,7 +362,7 @@
               </div>
 
           <div class="au-form-group casa-declaration">
-   		               <h3>Consent to verify <abbr title="Aviation security identification card">ASIC</abbr></h3>
+   		               <h3>Consent to check ASIC</h3>
 
    		<p class="au-callout" aria-label="Callout description1">
    		<label class="au-control-input">
